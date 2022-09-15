@@ -1,0 +1,72 @@
+<html>
+  <head>
+    <h1 style="font-size: 30px"><strong>Registration Form</strong></h1>
+    <link
+      href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <form
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 400px;
+        box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 50px;
+        text-align: center;
+      "
+      id="user-form"
+    >
+      <label for="name">Name</label>
+      <input
+        class="input"
+        required
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter Full Name"
+      />
+      <br />
+      <label for="email">Email</label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter Email-id"
+      />
+      <br />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter Password"
+      />
+      <br />
+      <label for="dob">Date of Birth</label>
+      <input
+        type="date"
+        id="dob"
+        name="dob"
+        min="1967-09-15"
+        max="2004-09-15"
+      />
+      <br />
+      <input type="checkbox" id="acceptTerms" name="acceptTerms" />
+      <label for="acceptTerms">Accept Terms & Conditions</label>
+      <br />
+      <button style="border: 1px" type="submit" id="submit">Submit</button>
+    </form>
+    <div
+      class="relative bg-white px-6 mt-5 pt-10 pb-8 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto sm:rounded-lg sm:px-10"
+    >
+      <div class="mx-auto">
+        <h2 class="text-3xl text-center font-boldleading-tight">Entries</h2>
+        <div class="divide-y divide-gray-300/50" id="user-entries"></div>
+      </div>
+    </div>
+    <script src="RF.js"></script>
+  </body>
+</html>
